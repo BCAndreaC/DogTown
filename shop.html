@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DogTown — Tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html#inicio" aria-label="DogTown home">
+          <img src="assets/images/hero-dog.svg" alt="DogTown" width="36" height="27" />
+          <span>DogTown</span>
+        </a>
+        <nav class="main-nav" aria-label="Principal">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+          <ul id="menu" class="nav-list">
+            <li><a href="index.html#quienes">Quiénes somos</a></li>
+            <li><a href="index.html#vision-mision">Visión &amp; Misión</a></li>
+            <li><a href="index.html#politicas">Políticas</a></li>
+            <li><a href="index.html#ubicacion">Ubicación</a></li>
+            <li><a href="shop.html" aria-current="page">Tienda</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a class="btn" href="index.html#contacto">Contáctame</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section container">
+      <h1>Tienda DogTown</h1>
+      <div class="grid-2">
+        <div>
+          <div id="product-grid" class="product-grid" aria-live="polite"></div>
+        </div>
+        <aside class="cart" id="cart" aria-label="Carrito">
+          <h3>Carrito</h3>
+          <div id="cart-items"></div>
+          <div class="cart-total"><span>Total</span> <strong id="cart-total">$0.00</strong></div>
+          <div style="display:flex; gap:.5rem; margin-top:.5rem">
+            <button id="clear-cart" class="btn secondary" type="button">Vaciar</button>
+            <button id="checkout" class="btn" type="button">Comprar</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year">2025</span> DogTown</div>
+        <div class="social">
+          <a class="social-link" href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+          <a class="social-link" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="social-link" href="https://x.com" target="_blank" rel="noreferrer">X</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="chat-widget">
+      <button id="chat-toggle" class="chat-toggle" aria-expanded="false">Chat</button>
+      <div id="chat-panel" class="chat-panel" hidden>
+        <div class="chat-header">
+          <strong>Chat DogTown</strong>
+          <button id="chat-close" aria-label="Cerrar">✕</button>
+        </div>
+        <div id="chat-log" class="chat-log" aria-live="polite"></div>
+        <form id="chat-form" class="chat-form">
+          <input id="chat-input" placeholder="Escribe un mensaje..." />
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+  </html>

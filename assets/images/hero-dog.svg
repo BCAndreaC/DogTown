@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Perro feliz minimalista">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6CB8A8"/>
+      <stop offset="1" stop-color="#4ea392"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#EFECEC"/>
+  <g transform="translate(40,40)">
+    <ellipse cx="120" cy="110" rx="110" ry="70" fill="url(#g)"/>
+    <circle cx="80" cy="80" r="10" fill="#fff"/>
+    <circle cx="160" cy="80" r="10" fill="#fff"/>
+    <path d="M95 120q25 20 50 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <path d="M45 70 q-10 -25 20 -20" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M195 70 q10 -25 -20 -20" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

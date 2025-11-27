@@ -1,37 +1,16 @@
-# Optimización de medios digitales para la Web: Imágenes gráficas. Producto integrador. Imágenes para un sitio web comercial
+# React + Vite
 
-### Instrucciones 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. Edita tu sitio web comercial con las imágenes trabajadas a lo largo del curso, tomando en cuenta la composición, impacto visual, y coherencia con la marca.
+Currently, two official plugins are available:
 
-2. El sitio deberá contener los siguientes elementos mínimos:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
--   Un mínimo de diez imágenes
+## React Compiler
 
--   Composición atractiva
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
--   Impacto comercial según el producto o servicio
+## Expanding the ESLint configuration
 
--   Congruencia entre imágenes y producto o servicio
-
--   Imágenes nítidas, sin alteraciones o deformaciones
-
--   Aplicación(insertar) mínima en dos secciones de tu página Web
-
--   Selección de formatos de imagen coherente con el objetivo e intención de la página web (dispositivo/resolución)
--   
-
-### Criterios de evaluación
--   Incluye un mínimo de diez imágenes
-
--   El sitio web tiene una composición atractiva, con relación a las imágenes que presenta
-
--   Las imágenes apoyan al impacto comercial del sitio web
-
--   Hay una congruencia evidente entre imágenes e impacto comercial
-
--   Las imágenes son nítidas, sin alteraciones o deformaciones
-
--   La selección de formatos de imagen es coherente con el objetivo e intención de la página web (dispositivo/resolución)
-
--   Excelente redacción y ortografía
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
