@@ -197,3 +197,7 @@ footer {
 footer a {
     color: white;
 }
+
+.navbar{
+    background-color: #f16d35 !important;
+}
