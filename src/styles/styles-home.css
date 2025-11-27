@@ -1,0 +1,332 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background-color: #f3f3f3;
+      color: #022933;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ----- LAYOUT GENERAL ----- */
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* ----- HEADER  ----- */
+    header {
+      background-color: #55b4a4;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    
+
+    .logo-text {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+    }
+
+    .nav-links a {
+      opacity: 0.9;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .profile-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #8fd1c7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .hero-image {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.1)
+      );
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      gap: 14px;
+    }
+
+    .hero-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .hero-btn {
+      padding: 10px 32px;
+      background-color: #6aa7e8;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-btn:hover {
+      filter: brightness(1.05);
+    }
+
+    .hero-text {
+      padding: 10px 0;
+    }
+
+    .hero-text h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #022933;
+    }
+
+    .hero-text p {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #4b5563;
+    }
+
+    /* ----- SERVICIOS DESTACADOS ----- */
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+/* ---- Imágenes de los servicios ---- */
+.service-image {
+  width: 100%;
+  height: 350px;             
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          
+  display: block;
+}
+
+
+    .service-name {
+      font-size: 14px;
+      color: #022933;
+    }
+
+    /* ----- TESTIMONIOS ----- */
+    .testimonials-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      padding: 40px 24px;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .testimonial-card img{
+        width: 50%;
+        height: 50%;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #8fd1c7;
+      opacity: 0.6;
+    }
+
+    .dot.active {
+      opacity: 1;
+    }
+
+    /* ----- FOOTER / BARRA INFERIOR ----- */
+    footer {
+      background-color: #55b4a4;
+      color: #ffffff;
+      padding: 10px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-name {
+      font-size: 18px;
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+  .footer-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #8fd1c7;
+  opacity: 0.95;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  color: #022933;
+  font-size: 14px;
+}
+
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .header-inner {
+        padding: 10px 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 12px;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .service-image {
+          height: 70px;
+        }
+      }
+    }
