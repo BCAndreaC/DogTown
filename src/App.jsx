@@ -353,94 +353,102 @@ function App() {
               href="https://facebook.com"
               target="_blank"
               rel="noreferrer"
+              aria-label="Facebook"
             >
-              Facebook
+              <i className="fab fa-facebook"></i> Facebook
             </a>
             <a
               className="social-link"
               href="https://instagram.com"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram"
             >
-              Instagram
+              <i className="fab fa-instagram"></i> Instagram
             </a>
             <a
               className="social-link"
               href="https://x.com"
               target="_blank"
               rel="noreferrer"
+              aria-label="X"
             >
-              X
+              <i className="fab fa-twitter"></i> X
             </a>
           </div>
         </div>
       </footer>
 
-     <div className="chat-widget">
-  <button
-    className="chat-toggle"
-    aria-expanded={isChatOpen}
-    onClick={() => setIsChatOpen(!isChatOpen)}
-  >
-    Chat
-  </button>
-
-  {isChatOpen && (
-    <div className="chat-panel">
-      <div className="chat-header">
-        <strong>Chat DogTown</strong>
-        <button className="chat-close" onClick={() => setIsChatOpen(false)}>
-          ✕
+      <div className="chat-widget">
+        <button
+          className="chat-toggle"
+          aria-expanded={isChatOpen}
+          onClick={() => setIsChatOpen(!isChatOpen)}
+        >
+          Chat
         </button>
-      </div>
 
-      <div className="chat-log">
-        {chatMessages.length === 0 && (
-          <p className="chat-empty">
-            ¡Hola! 🐶 ¿En qué puedo ayudarte?
-          </p>
-        )}
+        {isChatOpen && (
+          <div className="chat-panel">
+            <div className="chat-header">
+              <strong>Chat DogTown</strong>
+              <button
+                className="chat-close"
+                onClick={() => setIsChatOpen(false)}
+              >
+                ✕
+              </button>
+            </div>
 
-        {chatMessages.map((msg, index) => (
-          <div key={index} className="chat-message">
-            <p><strong>Tú:</strong> {msg.user}</p>
-            <p><strong>DogBot:</strong> {msg.bot}</p>
+            <div className="chat-log">
+              {chatMessages.length === 0 && (
+                <p className="chat-empty">¡Hola! 🐶 ¿En qué puedo ayudarte?</p>
+              )}
+
+              {chatMessages.map((msg, index) => (
+                <div key={index} className="chat-message">
+                  <p>
+                    <strong>Tú:</strong> {msg.user}
+                  </p>
+                  <p>
+                    <strong>DogBot:</strong> {msg.bot}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <form
+              className="chat-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (!chatInput.trim()) return;
+
+                const text = chatInput.trim();
+
+                setChatMessages((prev) => [
+                  ...prev,
+                  {
+                    user: text,
+                    bot: "Gracias por escribir 👌🐶, un humano te contestará pronto.",
+                  },
+                ]);
+
+                setChatInput("");
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Escribe un mensaje..."
+                value={chatInput}
+                onChange={(e) => setChatInput(e.target.value)}
+              />
+              <button type="submit" className="btn">
+                Enviar
+              </button>
+            </form>
           </div>
-        ))}
+        )}
       </div>
-
-      <form
-        className="chat-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (!chatInput.trim()) return;
-
-          const text = chatInput.trim();
-
-          setChatMessages((prev) => [
-            ...prev,
-            {
-              user: text,
-              bot: "Gracias por escribir 👌🐶, un humano te contestará pronto.",
-            },
-          ]);
-
-          setChatInput("");
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Escribe un mensaje..."
-          value={chatInput}
-          onChange={(e) => setChatInput(e.target.value)}
-        />
-        <button type="submit" className="btn">Enviar</button>
-      </form>
-    </div>
-  )}
-</div>
-
-
     </>
   );
 }
