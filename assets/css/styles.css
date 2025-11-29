@@ -22,7 +22,7 @@ body{
   box-shadow:var(--shadow);
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
-.logo{display:flex; align-items:center; gap:.6rem; font-weight:700}
+.logo{display:flex; align-items:center; gap:.6rem; font-weight:700; text-decoration: none; color:#fff}
 .logo span{font-size:1.2rem}
 .main-nav .nav-toggle{display:none; background:transparent; border:none; color:#fff; font-size:1.5rem}
 .main-nav .nav-list{display:flex; gap:1rem; list-style:none; padding:0; margin:0}
