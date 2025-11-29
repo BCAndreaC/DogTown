@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" role="img" aria-label="Hotel canino">
+  <rect width="100%" height="100%" fill="#EFECEC"/>
+  <g transform="translate(40,30)">
+    <rect x="40" y="60" width="360" height="160" rx="14" fill="#6CB8A8"/>
+    <rect x="80" y="100" width="60" height="80" fill="#fff" rx="8"/>
+    <rect x="180" y="100" width="60" height="80" fill="#fff" rx="8"/>
+    <rect x="280" y="100" width="60" height="80" fill="#fff" rx="8"/>
+    <path d="M40 60 L220 20 L400 60" fill="#4ea392"/>
+    <circle cx="220" cy="160" r="24" fill="#fff"/>
+    <path d="M205 160 q15 14 30 0" fill="none" stroke="#6CB8A8" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>
